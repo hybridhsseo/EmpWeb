@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html data-ng-app="myApp">
@@ -45,12 +45,12 @@
 	
 	app.controller("empController", function($scope) {
 		alert("empController");
-		$scope.message = "Á÷¿ø ¸®½ºÆ®";
+		$scope.message = "ì§ì› ë¦¬ìŠ¤íŠ¸";
 	});
 	
 	app.controller("cityController", function($scope) {
 		alert("cityController");
-		$scope.message = "µµ½Ã ¸®½ºÆ®";
+		$scope.message = "ë„ì‹œ ë¦¬ìŠ¤íŠ¸";
 	});
 
 </script>
