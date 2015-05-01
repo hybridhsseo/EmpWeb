@@ -53,8 +53,6 @@
 	app.controller("mainController", function($scope, $http, $rootScope, $templateCache) {
 		alert("mainController");
 		
-		$scope.pageClass = 'page-home';
-	    
 	    $rootScope.$on('$routeChangeStart', function(event, next, current) {
 	    		if (typeof current != 'undefined') {
 	        		$templateCache.removeAll();

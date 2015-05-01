@@ -6,6 +6,7 @@
 
 <h1>Angular ng-view template </h1>
 <h2>Home</h2>
+<h2> pageClass = {{pageClass}}</h2>
 
 <a href="#about" class="btn btn-success btn-lg">About</a>
 <a href="#contact" class="btn btn-danger btn-lg">Contact</a>    
