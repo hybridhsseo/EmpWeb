@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html data-ng-app="myApp">
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>template.jsp</title>
 <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css"/>
 
