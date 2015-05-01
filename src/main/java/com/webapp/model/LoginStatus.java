@@ -1,8 +1,7 @@
 package com.webapp.model;
 
-public class LoginResult {
+public class LoginStatus {
 	Boolean status = false;
-	Boolean loginstatus = false;
 	User user;
 
 	public Boolean getStatus() {
@@ -11,14 +10,6 @@ public class LoginResult {
 
 	public void setStatus(Boolean status) {
 		this.status = status;
-	}
-
-	public Boolean getLoginstatus() {
-		return loginstatus;
-	}
-
-	public void setLoginstatus(Boolean loginstatus) {
-		this.loginstatus = loginstatus;
 	}
 
 	public User getUser() {

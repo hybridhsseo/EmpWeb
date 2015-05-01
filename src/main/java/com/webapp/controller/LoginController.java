@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.webapp.model.LoginResult;
+import com.webapp.model.LoginStatus;
 import com.webapp.model.User;
 
 @Controller
@@ -21,14 +21,14 @@ public class LoginController {
 	
 	@ResponseBody
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public LoginResult login(@RequestBody User user, HttpSession session) {
+	public LoginStatus login(@RequestBody User user, HttpSession session) {
 		log.info("#########################");
 		log.info("login() POST...");
 		log.info("id=" + user.getId());
 		log.info("password=" + user.getPassword());
 		log.info("#########################");
 		
-		LoginResult result = new LoginResult();
+		LoginStatus result = new LoginStatus();
 		
 		if ("webapp".equals(user.getId()) && 
 			"1234".equals(user.getPassword())) {
@@ -49,31 +49,37 @@ public class LoginController {
 	
 	@ResponseBody
 	@RequestMapping(value="/logincheck", method=RequestMethod.GET)
-	public LoginResult logcheck(HttpSession session) {
+	public LoginStatus logcheck(HttpSession session) {
+		log.info("#########################");
+		log.info("logincheck() GET...");
+		log.info("#########################");
 		
 		User user = (User)session.getAttribute("user");
 		
-		LoginResult result = new LoginResult();
+		LoginStatus status = new LoginStatus();
 		if (user == null)
-			result.setStatus(false);
+			status.setStatus(false);
 		else
-			result.setStatus(true);
+			status.setStatus(true);
 		
-		result.setUser(user);
+		status.setUser(user);
 		
-		return result;
+		return status;
 	}
 	
 	@ResponseBody
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
-	public LoginResult logout(HttpSession session) {
+	public LoginStatus logout(HttpSession session) {
+		log.info("#########################");
+		log.info("logout() GET...");
+		log.info("#########################");
 		
 		session.invalidate();
 		
-		LoginResult result = new LoginResult();
-		result.setStatus(true);
+		LoginStatus status = new LoginStatus();
+		status.setStatus(false);
 		
-		return result;
+		return status;
 	}
 	
 	

@@ -2,10 +2,14 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!-- home.jsp -->
+<!-- login.jsp -->
+<h1>로그인</h1>
 
-<h1>Angular ng-view template </h1>
-<h2>Login</h2>
+<form novalidate="novalidate" data-ng-submit="submit()">
+<input type="text" name="id" data-ng-model="id"/>
+<input type="password" name="password" data-ng-model="password"/><br>
+<input type="submit" value="로그인" class="btn"/>
+<input type="reset" value="cancel" class="btn"/>
 
-<a href="#about" class="btn btn-success btn-lg">About</a>
-<a href="#contact" class="btn btn-danger btn-lg">Contact</a>    
+</form>
+

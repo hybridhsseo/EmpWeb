@@ -56,7 +56,7 @@
 
 	});
 	
-	app.controller("mainController", function($scope, $http, $rootScope, $templateCache) {
+	app.controller("mainController", function($scope, $http, $rootScope, $templateCache, $location) {
 		alert("mainController");
 		
 	    $rootScope.$on('$routeChangeStart', function(event, next, current) {
@@ -67,9 +67,31 @@
 	    });
 	    
 	    $scope.login = {
-	    		status : true
+	    		status : false
 	    }
 	    
+	    $scope.logout = function() {
+	    	console.log("logout...");
+	    	
+	    	$http.get("../webapp/login/logout").success(function(loginstatus) {
+				console.log(loginstatus);
+				$scope.login = loginstatus;
+			}).error(function() {
+				alert("server error...");
+			});
+	    	
+			$location.path("/home");
+		};
+		
+		/*
+		 * 로그인 유무 체크
+		 */
+		$http.get("../webapp/login/logincheck").success(function(loginstatus) {
+				console.log("로그인 유무 체크 = " + JSON.stringify(loginstatus));
+				$scope.login = loginstatus;
+		}).error(function() {
+			alert("server error...");
+		});
 	});
 
 </script>
@@ -77,14 +99,17 @@
 <script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 </head>
 <body data-ng-controller="mainController">
 <div class="container">
 	<a href="#/" class="btn btn-primary">Home</a>
-	<a href="#/about" class="btn btn-primary">About</a>
-	<a href="#/contact" class="btn btn-primary">Contact</a>
-	<a href="#/login" class="btn btn-success btn-sm" data-ng-if="login.status">Login</a>
-	<a href="#/login" class="btn btn-success btn-sm" data-ng-if="!login.status">Logout</a>
+	<span data-ng-if="login.status">
+		<a href="#/about" class="btn btn-primary">About</a>
+		<a href="#/contact" class="btn btn-primary">Contact</a>
+	</span>
+	<a href="#/login" class="btn btn-success btn-sm" data-ng-if="!login.status">Login</a>
+	<a href="#/login" class="btn btn-success btn-sm" data-ng-if="login.status" data-ng-click="logout()">Logout</a>
 </div>
 
 <div class="page {{ pageClass }}" data-ng-view>
@@ -93,3 +118,4 @@
 
 </body>
 </html>
+
