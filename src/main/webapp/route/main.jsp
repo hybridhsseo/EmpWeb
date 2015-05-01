@@ -62,6 +62,7 @@
 	});
 
 </script>
+<link rel="stylesheet" href="css/style.css"/>
 <script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
