@@ -7,6 +7,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.webapp.model.User;
 
@@ -16,16 +17,8 @@ public class LoginController {
 
 	static Log log = LogFactory.getLog(LoginController.class);
 	
+	@ResponseBody
 	@RequestMapping(value="/login", method=RequestMethod.GET)
-	public String login() {
-		log.info("#########################");
-		log.info("login() GET...");
-		log.info("#########################");
-		
-		return "login/loginform";
-	}
-	
-	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(User user, HttpSession session) {
 		log.info("#########################");
 		log.info("login() POST...");
@@ -37,10 +30,10 @@ public class LoginController {
 			"1234".equals(user.getPassword())) {
 			// Login success
 			session.setAttribute("user", user);
-			return "login/success";
+			return "{login : true}";
 		} else {
 			// Login Fail
-			return "redirect:login";
+			return "{login : false}";
 		}
 		
 	}

@@ -12,7 +12,7 @@
 <mvc:annotation-driven/>
 
 <mvc:view-controller path="/calendar" view-name="calendar"/>
-
+<mvc:view-controller path="/main" view-name="main/route"/>
 
 
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
