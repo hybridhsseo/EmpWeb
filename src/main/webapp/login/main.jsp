@@ -66,10 +66,24 @@
 	    		}
 	    });
 	    
+	    $scope.swipeLeft = function() {
+	    	console.log("swipeleft = " + $location.path());
+	    };
+	    
+	    $scope.swipeRight = function() {
+	    	console.log("swipeRight = " + $location.path());
+	    };
+	    
+	    /*
+		 * 로그아웃 상태 및 유저정보
+		 */
 	    $scope.login = {
 	    		status : false
 	    }
 	    
+	    /*
+		 * 로그아웃 처리
+		 */
 	    $scope.logout = function() {
 	    	console.log("logout...");
 	    	
@@ -112,7 +126,10 @@
 	<a href="#/login" class="btn btn-success btn-sm" data-ng-if="login.status" data-ng-click="logout()">Logout</a>
 </div>
 
-<div class="page {{ pageClass }}" data-ng-view>
+<div class="page {{ pageClass }}" data-ng-view
+								  data-ng-swipe-left="swipeLeft()"
+								  data-ng-swipe-right="swipeRight()"
+								  >
 <!-- default page = home -->
 </div>
 
