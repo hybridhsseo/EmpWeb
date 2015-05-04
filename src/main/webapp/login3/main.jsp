@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="css/style.css"/>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/grid.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
@@ -48,7 +49,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav" data-ng-show="login.status">
-			    <li><a href="#">Page 1</a></li>
+			    <li><a href="#/grid">Grid</a></li>
 			    <li><a href="#">Page 2</a></li>
 			    <li class="dropdown">
 		        	<a class="dropdown-toggle" data-toggle="dropdown" href="">Page 3

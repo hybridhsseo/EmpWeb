@@ -12,6 +12,12 @@ app.config(function($routeProvider) {
             controller: 'homeController'
         })
 
+        // grid page
+        .when('/grid', {
+            templateUrl: 'grid.jsp',
+            controller: 'gridController'
+        })
+        
         // about page
         .when('/about', {
             templateUrl: 'about.jsp',
