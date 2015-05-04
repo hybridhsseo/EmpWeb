@@ -22,110 +22,48 @@
 <script type="text/javascript" src="${angular}/angular-route.min.js"></script>
 <script type="text/javascript" src="${angular}/angular-touch.min.js"></script>
 
-<script type="text/javascript">
-	var app = angular.module("myApp", ["ngSanitize", "ngAnimate", "ngRoute", "ngTouch"]);
-	app.config(function($routeProvider) {
 
-	    $routeProvider
-	        // home page
-	        .when('/', {
-	            templateUrl: 'home.jsp',
-	            controller: 'homeController'
-	        })
-
-	        // about page
-	        .when('/about', {
-	            templateUrl: 'about.jsp',
-	            controller: 'aboutController'
-	        })
-
-	        // contact page
-	        .when('/contact', {
-	            templateUrl: 'contact.jsp',
-	            controller: 'contactController'
-	        })
-	        
-	        // login page
-	        .when('/login', {
-	            templateUrl: 'login.jsp',
-	            controller: 'loginController'
-	        })
-	    
-		 	// otherwise page
-	    	.otherwise({redirectTo: '/'});
-
-	});
-	
-	app.controller("mainController", function($scope, $http, $rootScope, $templateCache, $location) {
-		alert("mainController");
-		
-	    $rootScope.$on('$routeChangeStart', function(event, next, current) {
-	    		if (typeof current != 'undefined') {
-	        		$templateCache.removeAll();
-	           		console.log("current.templateUrl=" + current.templateUrl);
-	    		}
-	    });
-	    
-	    $scope.swipeLeft = function() {
-	    	console.log("swipeleft = " + $location.path());
-	    };
-	    
-	    $scope.swipeRight = function() {
-	    	console.log("swipeRight = " + $location.path());
-	    };
-	    
-	    /*
-		 * 로그아웃 상태 및 유저정보
-		 */
-	    $scope.login = {
-	    		status : false
-	    }
-	    
-	    /*
-		 * 로그아웃 처리
-		 */
-	    $scope.logout = function() {
-	    	console.log("logout...");
-	    	
-	    	$http.get("../webapp/login/logout").success(function(loginstatus) {
-				console.log(loginstatus);
-				$scope.login = loginstatus;
-			}).error(function() {
-				alert("server error...");
-			});
-	    	
-			$location.path("/home");
-		};
-		
-		/*
-		 * 로그인 유무 체크
-		 */
-		$http.get("../webapp/login/logincheck").success(function(loginstatus) {
-				console.log("로그인 유무 체크 = " + JSON.stringify(loginstatus));
-				$scope.login = loginstatus;
-		}).error(function() {
-			alert("server error...");
-		});
-	});
-
-</script>
 <link rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
 </head>
 <body data-ng-controller="mainController">
-<div class="container">
-	<a href="#/" class="btn btn-primary">Home</a>
-	<span data-ng-if="login.status">
-		<a href="#/about" class="btn btn-primary">About</a>
-		<a href="#/contact" class="btn btn-primary">Contact</a>
-	</span>
-	<a href="#/login" class="btn btn-success btn-sm" data-ng-if="!login.status">Login</a>
-	<a href="#/login" class="btn btn-success btn-sm" data-ng-if="login.status" data-ng-click="logout()">Logout</a>
-</div>
+<!-- ############## -->
+<!-- Navigation Bar -->
+<!-- ############## -->
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#/">Home</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav" data-ng-show="login.status">
+		    <li><a href="#">Page 1</a></li>
+		    <li><a href="#">Page 2</a></li>
+		    <li><a href="#/about">About</a></li>
+		    <li><a href="#/contact">Contact</a></li>
+		  </ul>
+		  <ul class="nav navbar-nav navbar-right">
+		    <li><a href="#/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+		    <li><a href="#/" data-ng-if="login.status" data-ng-click="logout()"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+		    <li><a href="#/login" data-ng-if="!login.status"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+		  </ul>
+		</div>
+	</div>
+</nav>
 
+<!-- ################ -->
+<!-- ng-view Template -->
+<!-- ################ -->
 <div class="page {{ pageClass }}" data-ng-view
 								  data-ng-swipe-left="swipeLeft()"
 								  data-ng-swipe-right="swipeRight()"
