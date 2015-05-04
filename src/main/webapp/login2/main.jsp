@@ -5,6 +5,7 @@
 <html data-ng-app="myApp">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
 <title>main.jsp</title>
 
 <c:url var="jquery" value="/jquery"/>
@@ -38,25 +39,25 @@
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-		    <span class="icon-bar"></span>
-		    <span class="icon-bar"></span>
-		    <span class="icon-bar"></span>
-		  </button>
-		  <a class="navbar-brand" href="#/">Home</a>
+			<a class="navbar-brand active" href="#/">Home</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			</button>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
-		  <ul class="nav navbar-nav" data-ng-show="login.status">
-		    <li><a href="#">Page 1</a></li>
-		    <li><a href="#">Page 2</a></li>
-		    <li><a href="#/about">About</a></li>
-		    <li><a href="#/contact">Contact</a></li>
-		  </ul>
-		  <ul class="nav navbar-nav navbar-right">
-		    <li><a href="#/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-		    <li><a href="#/" data-ng-if="login.status" data-ng-click="logout()"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
-		    <li><a href="#/login" data-ng-if="!login.status"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
-		  </ul>
+			<ul class="nav navbar-nav" data-ng-show="login.status">
+			    <li><a href="#">Page 1</a></li>
+			    <li><a href="#">Page 2</a></li>
+			    <li><a href="#/about">About</a></li>
+			    <li><a href="#/contact">Contact</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			    <li><a href="#/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			    <li><a href="#/" data-ng-if="login.status" data-ng-click="logout()"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+			    <li><a href="#/login" data-ng-if="!login.status"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+			</ul>
 		</div>
 	</div>
 </nav>
