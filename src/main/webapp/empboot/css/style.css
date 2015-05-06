@@ -1,5 +1,5 @@
 /*
- *
+ * FadeIn & FadeOut
  */
 @keyframes FadeIn {
     from    { opacity: 0 }
@@ -10,7 +10,31 @@
     from    { opacity: 0.5 }
     to      { opacity: 0 }
 }
-
+/*
+ * slideInRight & slideOutLeft
+ */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+@keyframes slideOutLeft {
+    from    { transform:translateX(0%); }
+    to      { transform: translateX(-100%); }
+}
+/*
+ * slideInDown & slideOutUp
+ */
+@keyframes slideInDown {
+    from    { transform:translateY(-100%); }
+    to      { transform: translateY(0%); }
+}
+@keyframes slideOutUp {
+    from    { transform:translateY(0%); }
+    to      { transform: translateY(-100%); }
+}
+/*
+ * page
+ */
 .page        {
 	bottom: 0;
 	position: relative;
@@ -20,34 +44,60 @@
 	border: 1px solid blue;
 }
 
+/*
+ * page-home
+ */
 .page-home {
 	
 }
-.page-home.ng-enter        { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
-.page-home.ng-leave        { animation: FadeOut 0.5s both ease-in; }
-
+.page-home.ng-enter       { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
+.page-home.ng-leave       { animation: FadeOut 0.5s both ease-in; }
+/*
+ * page-grid
+ */
 .page-grid {
 	
 }
-.page-grid.ng-enter       { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
-.page-grid.ng-leave       { animation: FadeOut 0.5s both ease-in; }
-
+.page-grid.ng-enter       { animation: slideInRight 1.0s both ease-in; animation-delay: 0.5s;}
+.page-grid.ng-leave       { animation: slideOutLeft 0.5s both ease-in; }
+/*
+ * page-grid
+ */
+.page-grid {
+	
+}
+.page-about.ng-enter      { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
+.page-about.ng-leave      { animation: FadeOut 0.5s both ease-in; }
+/*
+ * page-about
+ */
 .page-about {
 	
 }
-.page-about.ng-enter       { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
-.page-about.ng-leave       { animation: FadeOut 0.5s both ease-in; }
-
-
+.page-about.ng-enter    { animation: slideInDown 1.0s both ease-in; animation-delay: 0.5s;}
+.page-about.ng-leave    { animation: slideOutUp 0.5s both ease-in; }
+/*
+ * page-contact
+ */
 .page-contact {
 	
 }
-.page-contact.ng-enter     { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
-.page-contact.ng-leave     { animation: FadeOut 0.5s both ease-in; }
-
+.page-contact.ng-enter    { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
+.page-contact.ng-leave    { animation: FadeOut 0.5s both ease-in; }
+/*
+ * page-signup
+ */
+.page-signup {
+	
+}
+.page-signup.ng-enter     { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
+.page-signup.ng-leave     { animation: FadeOut 0.5s both ease-in; }
+/*
+ * page-login
+ */
 .page-login {
 	
 }
-.page-login.ng-enter       { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
-.page-login.ng-leave       { animation: FadeOut 0.5s both ease-in; }
+.page-login.ng-enter      { animation: FadeIn 1.0s both ease-in; animation-delay: 0.5s;}
+.page-login.ng-leave      { animation: FadeOut 0.5s both ease-in; }
 
