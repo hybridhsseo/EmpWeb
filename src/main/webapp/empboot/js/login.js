@@ -11,7 +11,9 @@ app.controller("loginController", function($scope, $http, $location) {
 	$scope.password = "";
 	
 	$scope.submit = function() {
+		
 		console.log("login submit click...");
+		console.log("sex = " + $scope.sex);
 		
 		$http.post("../webapp/login/login", {id : $scope.id, password : $scope.password}).success(function(loginstatus) {
 			console.log(loginstatus);

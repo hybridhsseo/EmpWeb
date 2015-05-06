@@ -16,6 +16,7 @@
 
 <script type="text/javascript" src="${jquery}/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="${bootstrap}/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
 
 <script type="text/javascript" src="${angular}/angular.min.js"></script>
 <script type="text/javascript" src="${angular}/angular-sanitize.min.js"></script>
@@ -28,6 +29,7 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/grid.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
@@ -49,18 +51,28 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav" data-ng-show="login.status">
-			    <li><a href="#/grid">Grid</a></li>
-			    <li><a href="#">Page 2</a></li>
 			    <li class="dropdown">
-		        	<a class="dropdown-toggle" data-toggle="dropdown" href="">Page 3
+		        	<a class="dropdown-toggle" data-toggle="dropdown" href="">Bootstrap
 		        	<span class="caret"></span></a>
 			        <ul class="dropdown-menu">
-			            <li><a href="#">Page 3-1</a></li>
+			            <li><a href="#/grid">grid exam</a></li>
 			            <li><a href="#">Page 3-2</a></li>
 			            <li><a href="#">Page 3-3</a></li>
 			            <li><a href="#">Page 3-4</a></li>
 			        </ul>
 		        </li>
+		        <li class="dropdown">
+		        	<a class="dropdown-toggle" data-toggle="dropdown" href="">SVG
+		        	<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			            <li><a href="#/map">map exam</a></li>
+			            <li><a href="#">Page 3-2</a></li>
+			            <li><a href="#">Page 3-3</a></li>
+			            <li><a href="#">Page 3-4</a></li>
+			        </ul>
+		        </li>
+		        <li><a href="#">Page 1</a></li>
+			    <li><a href="#">Page 2</a></li>
 			    <li><a href="#/about">About</a></li>
 			    <li><a href="#/contact">Contact</a></li>
 			</ul>
