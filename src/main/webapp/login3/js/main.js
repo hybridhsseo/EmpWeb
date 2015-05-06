@@ -3,6 +3,7 @@
  */
 
 var app = angular.module("myApp", ["ngSanitize", "ngAnimate", "ngRoute", "ngTouch"]);
+
 app.config(function($routeProvider) {
 
     $routeProvider

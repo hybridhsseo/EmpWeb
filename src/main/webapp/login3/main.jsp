@@ -58,6 +58,7 @@
 			            <li><a href="#">Page 3-1</a></li>
 			            <li><a href="#">Page 3-2</a></li>
 			            <li><a href="#">Page 3-3</a></li>
+			            <li><a href="#">Page 3-4</a></li>
 			        </ul>
 		        </li>
 			    <li><a href="#/about">About</a></li>
@@ -65,7 +66,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			    <li><a href="#/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-			    <li><a href="#/" data-ng-if="login.status" data-ng-click="logout()"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+			    <li><a href="#/" data-ng-if="login.status" data-ng-click="logout()"><span class="glyphicon glyphicon-log-out" ></span> Logout</a></li>
 			    <li><a href="#/login" data-ng-if="!login.status"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
 			</ul>
 		</div>
