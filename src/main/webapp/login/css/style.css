@@ -1,5 +1,16 @@
-/* make our pages be full width and full height */
-/* positioned absolutely so that the pages can overlap each other as they enter and leave */
+/*
+ *
+ */
+@keyframes FadeIn {
+    from    { opacity: 0 }
+    to      { opacity: 1 }
+}
+
+@keyframes FadeOut {
+    from    { opacity: 1 }
+    to      { opacity: 0 }
+}
+
 .page        {
 	bottom: 0;
 	position: relative;
@@ -12,15 +23,25 @@
 .page-home {
 	
 }
+.page-home.ng-enter        { animation: FadeIn 1.0s both ease-in; }
+.page-home.ng-leave        { animation: Fadeout 1.0s both ease-in; }
 
 .page-about {
 	
 }
+.page-about.ng-enter        { animation: FadeIn 1.0s both ease-in; }
+.page-about.ng-leave        { animation: Fadeout 1.0s both ease-in; }
+
 
 .page-contact {
 	
 }
+.page-contact.ng-enter        { animation: FadeIn 1.0s both ease-in; }
+.page-contact.ng-leave        { animation: Fadeout 1.0s both ease-in; }
 
 .page-login {
 	
 }
+.page-login.ng-enter        { animation: FadeIn 1.0s both ease-in; }
+.page-login.ng-leave        { animation: Fadeout 1.0s both ease-in; }
+
