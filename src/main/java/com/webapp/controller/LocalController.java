@@ -12,6 +12,7 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,6 +21,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.webapp.model.City;
 import com.webapp.model.GangSeo;
 
 
@@ -30,15 +32,14 @@ public class LocalController {
 	
 	@RequestMapping(value="city", method=RequestMethod.GET, headers="Accept=application/json")
 	@ResponseBody
-	public List<String> city() throws IOException, ParseException{
+	public List<City> city() throws IOException, ParseException{
 		log.info("###############");
 		log.info("local");
 		log.info("###############");
-		List<String> list = new ArrayList<String>();
+		List<City> list = new ArrayList<City>();
 		
-		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode?numOfRows=10&pageNo=1&MobileOS=AND&MobileApp=myxxx&_type=json&ServiceKey=";
+		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode?numOfRows=50&pageNo=1&MobileOS=AND&MobileApp=mytour&_type=json&ServiceKey=";
 		String key = "sA7tgy37XyQzBU2fPZpZw%2BGKNlR0BPdgP2RhAvNrw4ls2so%2F%2BgeLDAT8AHJO6CacIlHvKIfubhwPjiDXpy%2B7%2Fw%3D%3D";
-//		String seoul = "&areaCode=1&numOfRows=20&pageNo=1&MobileOS=ETC&MobileApp=AppTesting";
 		
 		URL get = new URL(url+key);
 		InputStream in = get.openStream();
@@ -56,13 +57,13 @@ public class LocalController {
 		
 		Iterator<JSONObject> iterator = item.iterator();
 		while (iterator.hasNext()) {
-//			List<LocalApi> name = (List<LocalApi>) iterator.next().get("name");
-			String name = (String)iterator.next().get("name");
-			list.add(name);
-//			log.info(name);
+			JSONObject obj = (JSONObject)iterator.next();
+			
+			Long code = (Long)obj.get("code"); 
+			String name = (String)obj.get("name");
+			
+			list.add(new City(code, name));
 		}
-//		log.info(name);
-		
 		return list;
 	}
 	

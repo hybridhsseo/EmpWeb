@@ -24,6 +24,11 @@ app.config(function($routeProvider) {
             templateUrl: 'map.jsp',
             controller: 'mapController'
         })
+         // map page
+        .when('/local', {
+            templateUrl: 'local.jsp',
+            controller: 'localController'
+        })
         
         // about page
         .when('/about', {

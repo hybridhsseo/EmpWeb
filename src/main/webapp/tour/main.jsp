@@ -30,6 +30,7 @@
 <script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/grid.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
@@ -69,6 +70,16 @@
 			            <li><a href="#">Page 3-2</a></li>
 			            <li><a href="#">Page 3-3</a></li>
 			            <li><a href="#">Page 3-4</a></li>
+			        </ul>
+		        </li>
+		        <li class="dropdown">
+		        	<a class="dropdown-toggle" data-toggle="dropdown" href="">Tour
+		        	<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			            <li><a href="#/local">관광정보</a></li>
+			            <li><a href="#">Page 4-2</a></li>
+			            <li><a href="#">Page 4-3</a></li>
+			            <li><a href="#">Page 4-4</a></li>
 			        </ul>
 		        </li>
 		        <li><a href="#">Page 1</a></li>
