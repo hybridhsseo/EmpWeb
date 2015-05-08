@@ -2,11 +2,26 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!-- about.jsp -->
+<!-- local.jsp -->
 
+<div class="container">
+<hr>
 <h1>관광정보 </h1>
-<h2>Local</h2>
+<hr>
+<select data-ng-change="cityChange()"
+        data-ng-model="selectedCity">
+	<option data-ng-repeat="city in citys" value="{{city.code}}" data-ng-selected="city.code==1">{{city.name}}</option>
+</select>
 
+<select data-ng-change=""
+        data-ng-model="selectedCityGu">
+	<option data-ng-repeat="gu in gus" value="{{gu.code}}" data-ng-selected="gu.code==1">{{gu.name}}</option>
+</select>
 
-<a href="#/" class="btn btn-success btn-lg">Home</a>
-<a href="#/contact" class="btn btn-danger btn-lg">Contact</a>
+<ul>
+<li ></li>
+
+</ul>
+
+</div>
+
