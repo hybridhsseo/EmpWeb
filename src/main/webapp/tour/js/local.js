@@ -9,7 +9,8 @@ app.controller("localController", function($scope, $http) {
 	
 	$http.get("../webapp/local/city").success(function(citys) {
 		console.log(citys);
-		$scope.citys = citys;
+		console.log(JSON.stringify(citys));
+		$scope.citys = angular.copy(citys);
 	}).error(function() {
 		alert("server error...");
 	});

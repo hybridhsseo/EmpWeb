@@ -9,3 +9,11 @@
 
 <a href="#/" class="btn btn-success btn-lg">Home</a>
 <a href="#/contact" class="btn btn-danger btn-lg">Contact</a>
+<hr>
+<select>
+	<option data-ng-repeat="local in locals"
+			data-ng-change="changeLocal()"
+			data-ng-model="selectedLocal"
+			data-ng-selected="local.code==2" 
+	value="{{local.code}}">{{local.name}}</option>
+</select>
