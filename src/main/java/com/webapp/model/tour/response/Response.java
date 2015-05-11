@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class Response {
 	Header header;
-	Body2 body;
+	Body body;
 	
 	public Header getHeader() {
 		return header;
@@ -12,10 +12,10 @@ public class Response {
 	public void setHeader(Header header) {
 		this.header = header;
 	}
-	public Body2 getBody() {
+	public Body getBody() {
 		return body;
 	}
-	public void setBody(Body2 body) {
+	public void setBody(Body body) {
 		this.body = body;
 	}
 }

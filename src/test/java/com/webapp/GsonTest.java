@@ -15,7 +15,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.webapp.model.User;
 import com.webapp.model.tour.response.ResponseMessage;
-import com.webapp.model.tour.response.ResponseMessage2;
 
 public class GsonTest {
 
@@ -32,13 +31,10 @@ public class GsonTest {
 //			System.out.println(scan.nextLine());
 //		
 		ResponseMessage rm=null;
-		ResponseMessage2 rm2=null;
 		try {
 			rm = g.fromJson(new InputStreamReader(u.openStream()), ResponseMessage.class);
 			g.toJson(rm, System.out);
 		} catch (JsonSyntaxException e) {
-			rm2 = g.fromJson(new InputStreamReader(u.openStream()), ResponseMessage2.class);
-			g.toJson(rm2, System.out);
 //			e.printStackTrace();
 		}
 		
