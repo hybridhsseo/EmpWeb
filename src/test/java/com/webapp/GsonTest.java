@@ -1,15 +1,20 @@
 package com.webapp;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import org.junit.Test;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.webapp.model.User;
+import com.webapp.model.tour.Items;
+import com.webapp.model.tour.ResponseMessage;
 
 public class GsonTest {
 
@@ -46,31 +51,21 @@ public class GsonTest {
 		
 	}
 	@Test
-	public void test3() {
+	public void test3() throws IOException {
 		Gson g = new GsonBuilder().create();
-		String json = "{item : {\"id\":\"100\",\"password\":\"1234\"}}";
+		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword?keyword=hotel&numOfRows=20&pageNo=1&_type=json&MobileOS=ETC&MobileApp=Emp&ServiceKey=sA7tgy37XyQzBU2fPZpZw%2BGKNlR0BPdgP2RhAvNrw4ls2so%2F%2BgeLDAT8AHJO6CacIlHvKIfubhwPjiDXpy%2B7%2Fw%3D%3D&keyword=사찰";
 		
-		Items item = g.fromJson(json, Items.class);
+		URL u = new URL(url);
+		InputStream in = u.openStream();
+		Scanner scan = new Scanner(in);
+		while(scan.hasNextLine())
+			System.out.println(scan.nextLine());
 		
-		System.out.println(item.getItem().get("id"));
-		System.out.println(item.getItem().get("password"));
 		
-		System.out.println(g.toJson(item));
+		ResponseMessage rm = g.fromJson(new InputStreamReader(u.openStream()), ResponseMessage.class);
+		
+//		System.out.println(g.toJson(item));
+		g.toJson(rm, System.out);
 	}
 	
-	@Test
-	public void test4() throws FileNotFoundException {
-		Gson g = new GsonBuilder().create();
-		FileReader xxx = new FileReader("d:\\xxx.json");
-		
-		TourApi tour = g.fromJson(xxx, TourApi.class);
-		
-		
-		System.out.println(tour.getResponse().getBody().getItems().getItem().get("agelimit"));
-		System.out.println(tour.getResponse().getBody().getItems().getItem().get("placeinfo"));
-				
-		
-		
-	}
-
 }

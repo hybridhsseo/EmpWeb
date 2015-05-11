@@ -1,8 +1,8 @@
-package com.webapp;
+package com.webapp.model.tour;
 
 import java.util.Map;
 
-public class TourApi {
+public class ResponseMessage {
 	Response response;
 
 	public Response getResponse() {
@@ -12,5 +12,5 @@ public class TourApi {
 	public void setResponse(Response response) {
 		this.response = response;
 	}
-
+	
 }
