@@ -14,9 +14,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.webapp.model.User;
-import com.webapp.model.tour.Items;
-import com.webapp.model.tour.ResponseMessage;
-import com.webapp.model.tour.ResponseMessage2;
+import com.webapp.model.tour.response.ResponseMessage;
+import com.webapp.model.tour.response.ResponseMessage2;
 
 public class GsonTest {
 

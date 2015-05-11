@@ -1,4 +1,4 @@
-package com.webapp.model.tour;
+package com.webapp.model.tour.response;
 
 import java.util.Map;
 
