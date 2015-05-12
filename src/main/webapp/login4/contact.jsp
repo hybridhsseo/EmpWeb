@@ -8,4 +8,5 @@
 <h2>Contact</h2>
 
 <a href="#/" class="btn btn-success btn-lg">Home</a>
-<a href="#about" class="btn btn-danger btn-lg">About</a>    
+<a href="#/about" class="btn btn-danger btn-lg">About</a>
+<a href="#/contact" data-ng-click="reload()">reload</a>
