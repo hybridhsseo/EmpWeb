@@ -10,8 +10,6 @@ public class RequestParameter {
 	String _type = "json";
 	String serviceKey = "sA7tgy37XyQzBU2fPZpZw%2BGKNlR0BPdgP2RhAvNrw4ls2so%2F%2BgeLDAT8AHJO6CacIlHvKIfubhwPjiDXpy%2B7%2Fw%3D%3D";
 
-	String keyword;
-	
 	public String getQueryString() {
 		String queryString="";
 		queryString += "numOfRows=" + numOfRows;
@@ -73,14 +71,4 @@ public class RequestParameter {
 		this.serviceKey = serviceKey;
 	}
 
-	public String getKeyword() {
-		return keyword;
-	}
-
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
-	
-	
-	
 }

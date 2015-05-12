@@ -9,6 +9,8 @@ import java.net.URL;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,38 +25,18 @@ import com.webapp.model.tour.response.Response;
 import com.webapp.model.tour.response.ResponseMessage;
 
 @Controller
-@RequestMapping(value="/tour")
-public class SearchKeywordController {
+@RequestMapping(value="/ajax")
+public class AjaxController {
 	
-	static Log log = LogFactory.getLog(SearchKeywordController.class);
+	static Log log = LogFactory.getLog(AjaxController.class);
 	
-	@RequestMapping(value="searchkeyword", method=RequestMethod.GET)
+	@RequestMapping(value="single", method=RequestMethod.POST)
 	@ResponseBody
-	public ResponseMessage searchKeyword(SearchRequestParameter request) {
+	public Integer singleValue(@RequestBody Integer num) {
 		log.info("#############################################");
-		log.info("searchKeyword()...");
+		log.info("singleValue()... num = " + num);
 		log.info("#############################################");
 		
-		Gson g = new GsonBuilder().create();
-		
-		ResponseMessage msg= null;
-		Items items = null;
-		InputStream in=null;
-		try {
-			log.info(request.getUrl());
-			URL u = new URL(request.getUrl());
-			in = u.openStream();
-			msg = g.fromJson(new InputStreamReader(in), ResponseMessage.class);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (JsonSyntaxException e) {
-			msg = new ResponseMessage();
-//			msg.setResponse();
-		}
-		
-		return msg;
+		return num;
 	}
-	
 }
