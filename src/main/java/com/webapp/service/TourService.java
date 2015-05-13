@@ -55,10 +55,6 @@ public class TourService {
 					List<Map<Object, Object>> list = new ArrayList<>();
 					list.add((Map<Object, Object>)item);
 					citems.setItem(list);
-					
-//					LinkedTreeMap[] array = new LinkedTreeMap[1];
-//					array[0] = (LinkedTreeMap)item;
-//					citems.setItem(array);
 					msg.getResponse().getBody().setItems(citems);
 				}
 			}
@@ -68,7 +64,6 @@ public class TourService {
 			e.printStackTrace();
 		} catch (JsonSyntaxException e) {
 			msg = new ResponseMessage();
-//			msg.setResponse();
 		}
 		
 		return msg;
