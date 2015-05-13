@@ -19,4 +19,5 @@
 </div>
 
 <textarea name="content" data-ng-model="content2">
+
 </textarea>

@@ -19,6 +19,12 @@ app.config(function($routeProvider) {
             controller: 'gridController'
         })
         
+        // grid page
+        .when('/carousel', {
+            templateUrl: 'carousel.jsp',
+            controller: 'carouselController'
+        })
+        
          // map page
         .when('/map', {
             templateUrl: 'map.jsp',

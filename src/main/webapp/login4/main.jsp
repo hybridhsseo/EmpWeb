@@ -15,6 +15,7 @@
 <c:url var="angularAnimate" value="/node_modules/angular-animate"/>
 <c:url var="angularRoute" value="/node_modules/angular-route"/>
 <c:url var="angularTouch" value="/node_modules/angular-touch"/>
+<c:url var="angularBootstrap" value="/node_modules/angular-bootstrap/dist"/>
 
 <link rel="stylesheet" href="${bootstrap}/css/bootstrap.min.css"/>
 
@@ -26,6 +27,7 @@
 <script type="text/javascript" src="${angularAnimate}/angular-animate.min.js"></script>
 <script type="text/javascript" src="${angularRoute}/angular-route.min.js"></script>
 <script type="text/javascript" src="${angularTouch}/angular-touch.min.js"></script>
+<script type="text/javascript" src="${angularBootstrap}/angular-bootstrap.min.js"></script>
 
 
 <link rel="stylesheet" href="css/style.css"/>
