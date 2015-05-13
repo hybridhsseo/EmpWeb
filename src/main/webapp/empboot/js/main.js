@@ -37,6 +37,12 @@ app.config(function($routeProvider) {
             controller: 'buttonsController'
         })
         
+         // datepicker page
+        .when('/bootstrap/datepicker', {
+            templateUrl: 'bootstrap/datepicker.jsp',
+            controller: 'datepickerController'
+        })
+        
          // map page
         .when('/map', {
             templateUrl: 'map.jsp',
