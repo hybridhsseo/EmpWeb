@@ -25,6 +25,18 @@ app.config(function($routeProvider) {
             controller: 'carouselController'
         })
         
+        // pagenation page
+        .when('/bootstrap/pagenation', {
+            templateUrl: 'bootstrap/pagenation.jsp',
+            controller: 'pagenationController'
+        })
+        
+         // buttons page
+        .when('/bootstrap/buttons', {
+            templateUrl: 'bootstrap/buttons.jsp',
+            controller: 'buttonsController'
+        })
+        
          // map page
         .when('/map', {
             templateUrl: 'map.jsp',
