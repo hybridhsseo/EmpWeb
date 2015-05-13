@@ -9,3 +9,14 @@
 
 <a href="#/" class="btn btn-success btn-lg">Home</a>
 <a href="#/contact" class="btn btn-danger btn-lg">Contact</a>
+<hr>
+<button data-ng-click="copy()">copy</button>
+<textarea wrap="hard" name="content" data-ng-model="content">
+</textarea>
+
+<div>
+{{content}}
+</div>
+
+<textarea name="content" data-ng-model="content2">
+</textarea>
