@@ -6,8 +6,12 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.omg.IOP.ServiceContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,4 +43,18 @@ public class AjaxController {
 		
 		return num;
 	}
+	
+	@RequestMapping(value="path", method=RequestMethod.GET)
+	@ResponseBody
+	public String applicationRoot(HttpServletRequest request) {
+		 ServletContext application = request.getServletContext();
+		 String path = application.getRealPath("/img");
+
+		log.info("#############################################");
+		log.info("applicationRoot()... path=" + path);
+		log.info("#############################################");
+		
+		return path;
+	}
+	
 }
