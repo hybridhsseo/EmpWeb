@@ -2,7 +2,7 @@
  * mainController
  */
 
-var app = angular.module("myApp", ["ngSanitize", "ngAnimate", "ngRoute", "ngTouch"]);
+var app = angular.module("myApp", ["ngSanitize", "ngAnimate", "ngRoute", "ngTouch", "ui.bootstrap"]);
 
 app.config(function($routeProvider) {
 
@@ -14,12 +14,12 @@ app.config(function($routeProvider) {
         })
 
         // grid page
-        .when('/grid', {
-            templateUrl: 'grid.jsp',
+        .when('/bootstrap/grid', {
+            templateUrl: 'bootstrap/grid.jsp',
             controller: 'gridController'
         })
         
-        // grid page
+        // carousel page
         .when('/carousel', {
             templateUrl: 'carousel.jsp',
             controller: 'carouselController'

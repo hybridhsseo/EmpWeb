@@ -28,12 +28,13 @@
 <script type="text/javascript" src="${angularRoute}/angular-route.min.js"></script>
 <script type="text/javascript" src="${angularTouch}/angular-touch.min.js"></script>
 <script type="text/javascript" src="${angularBootstrap}/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="${angularBootstrap}/ui-bootstrap-tpls.min.js"></script>
 
 
 <link rel="stylesheet" href="css/style.css"/>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
-<script type="text/javascript" src="js/grid.js"></script>
+<script type="text/javascript" src="js/bs/grid.js"></script>
 <script type="text/javascript" src="js/carousel.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
@@ -61,8 +62,8 @@
 		        	<a class="dropdown-toggle" data-toggle="dropdown" href="">Bootstrap
 		        	<span class="caret"></span></a>
 			        <ul class="dropdown-menu">
-			            <li><a href="#/grid">grid exam</a></li>
-			            <li><a href="#/carousel">Carosel</a></li>
+			            <li><a href="#/bootstrap/grid">grid exam</a></li>
+			            <li><a href="#/carousel">Carousel</a></li>
 			            <li><a href="#">Page 3-3</a></li>
 			            <li><a href="#">Page 3-4</a></li>
 			        </ul>
