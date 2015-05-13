@@ -31,11 +31,12 @@
 <script type="text/javascript" src="${angularBootstrap}/ui-bootstrap-tpls.min.js"></script>
 
 
+
 <link rel="stylesheet" href="css/style.css"/>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/bs/grid.js"></script>
-<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/bs/carousel.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
@@ -63,7 +64,7 @@
 		        	<span class="caret"></span></a>
 			        <ul class="dropdown-menu">
 			            <li><a href="#/bootstrap/grid">grid exam</a></li>
-			            <li><a href="#/carousel">Carousel</a></li>
+			            <li><a href="#/bootstrap/carousel">Carousel</a></li>
 			            <li><a href="#">Page 3-3</a></li>
 			            <li><a href="#">Page 3-4</a></li>
 			        </ul>

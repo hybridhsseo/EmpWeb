@@ -20,8 +20,8 @@ app.config(function($routeProvider) {
         })
         
         // carousel page
-        .when('/carousel', {
-            templateUrl: 'carousel.jsp',
+        .when('/bootstrap/carousel', {
+            templateUrl: 'bootstrap/carousel.jsp',
             controller: 'carouselController'
         })
         
@@ -65,7 +65,7 @@ app.controller("mainController", function($scope, $http, $rootScope, $templateCa
 	
     $rootScope.$on('$routeChangeStart', function(event, next, current) {
     		if (typeof current != 'undefined') {
-        		$templateCache.removeAll();
+//        		$templateCache.removeAll();
            		console.log("current.templateUrl=" + current.templateUrl);
     		}
     });
