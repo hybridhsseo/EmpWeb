@@ -1,8 +1,23 @@
 /*
- * mainController
+ * myApp Module
  */
 
 var app = angular.module("myApp", ["ngSanitize", "ngAnimate", "ngRoute", "ngTouch", "ui.bootstrap"]);
+
+app.filter('convertAreacode', function () {
+	  return function (areacode, scope) {
+
+		  var areaName="xx";
+		  for (var i=0; i<scope.areacodes.length; i++) {
+			  console.log("code=" + scope.areacodes[i].code);
+			  console.log("areacode=" + areacode);
+			  if (scope.areacodes[i].code == areacode)
+				  areaName = scope.areacodes[i].name;
+		  }
+		  
+		  return areaName;
+	  };
+});
 
 app.config(function($routeProvider) {
 
@@ -84,6 +99,9 @@ app.config(function($routeProvider) {
 
 });
 
+/*
+ * mainController
+ */
 app.controller("mainController", function($scope, $http, $rootScope, $templateCache, $location) {
 	alert("mainController");
 	

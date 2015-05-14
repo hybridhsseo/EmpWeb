@@ -6,4 +6,12 @@
 
 <h1>Searchkeyword</h1>
 <hr>
+{{areacode | convertAreacode:this}}
+<hr>
+<div>
+{{response}}
+</div>
+
+
+
 

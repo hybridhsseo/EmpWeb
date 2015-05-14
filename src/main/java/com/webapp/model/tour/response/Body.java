@@ -3,8 +3,7 @@ package com.webapp.model.tour.response;
 import java.util.Map;
 
 public class Body {
-	Object items;
-//	Items items;
+	Object items;	// "", {}
 	Long numOfRows;
 	Long pageNo;
 	Long totalCount;
@@ -16,12 +15,6 @@ public class Body {
 		this.items = items;
 	}
 	
-//	public Items getItems() {
-//		return items;
-//	}
-//	public void setItems(Items items) {
-//		this.items = items;
-//	}
 	public Long getNumOfRows() {
 		return numOfRows;
 	}

@@ -34,6 +34,7 @@ public class TourService {
 			log.info(url);
 			URL u = new URL(url);
 			in = u.openStream();
+			
 			msg = g.fromJson(new InputStreamReader(in), ResponseMessage.class);
 			log.info(msg.getResponse().getBody().getItems().getClass());
 			
