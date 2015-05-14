@@ -35,14 +35,30 @@ app.controller("searchkeywordController", function($scope, $http) {
 	};
 	
 	$scope.keyword = "궁궐";
+	$scope.search = function() {
+		var kvalue = encodeURI($scope.keyword);
+		
+		$http.get("../webapp/tour/searchkeyword?keyword=" + kvalue).success(function(result) {
+			$scope.response = result.response;
+			console.log(result);
+		}).error(function() {
+			alert("server error...");
+		});
+	};
 	
-	var kvalue = encodeURI($scope.keyword);
+	$scope.currentPage = 1;
 	
-	$http.get("../webapp/tour/searchkeyword?keyword=" + kvalue).success(function(response) {
-		$scope.response = response;
-		console.log(response);
-	}).error(function() {
-		alert("server error...");
-	});
+	$scope.changePage = function() {
+		alert($scope.currentPage);
+		var kvalue = encodeURI($scope.keyword);
+		$http.get("../webapp/tour/searchkeyword?keyword=" + kvalue +"&pageNo=" + $scope.currentPage).success(function(result) {
+			$scope.response = result.response;
+			console.log(result);
+		}).error(function() {
+			alert("server error...");
+		});
+	};
+	
+	
 	
 });

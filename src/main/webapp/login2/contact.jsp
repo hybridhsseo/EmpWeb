@@ -9,3 +9,4 @@
 
 <a href="#/" class="btn btn-success btn-lg">Home</a>
 <a href="#about" class="btn btn-danger btn-lg">About</a>    
+<h1>id = {{id}}</h1>

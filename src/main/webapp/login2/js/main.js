@@ -19,7 +19,7 @@ app.config(function($routeProvider) {
         })
 
         // contact page
-        .when('/contact', {
+        .when('/contact/:id', {
             templateUrl: 'contact.jsp',
             controller: 'contactController'
         })

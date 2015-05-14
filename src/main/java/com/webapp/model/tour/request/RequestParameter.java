@@ -3,7 +3,7 @@ package com.webapp.model.tour.request;
 import java.util.Map;
 
 public class RequestParameter {
-	Integer numOfRows = 50;
+	Integer numOfRows = 10;
 	Integer pageNo = 1;
 	String mobileOS = "AND";
 	String mobileApp = "EmpWeb";
