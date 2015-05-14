@@ -40,6 +40,7 @@
 <script type="text/javascript" src="js/bs/pagenation.js"></script>
 <script type="text/javascript" src="js/bs/buttons.js"></script>
 <script type="text/javascript" src="js/bs/datepicker.js"></script>
+<script type="text/javascript" src="js/tour/searchkeyword.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
@@ -84,7 +85,7 @@
 			            <li><a href="#">Page 3-4</a></li>
 			        </ul>
 		        </li>
-		        <li><a href="#">Page 1</a></li>
+		        <li><a href="#/tour/searchkeyword">SearchKeyword</a></li>
 			    <li><a href="#">Page 2</a></li>
 			    <li><a href="#/about">About</a></li>
 			    <li><a href="#/contact">Contact</a></li>

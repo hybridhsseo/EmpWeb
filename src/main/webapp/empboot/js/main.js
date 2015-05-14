@@ -43,6 +43,12 @@ app.config(function($routeProvider) {
             controller: 'datepickerController'
         })
         
+          // searchkeyword page
+        .when('/tour/searchkeyword', {
+            templateUrl: 'tour/searchkeyword.jsp',
+            controller: 'searchkeywordController'
+        })
+        
          // map page
         .when('/map', {
             templateUrl: 'map.jsp',
