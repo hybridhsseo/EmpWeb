@@ -16,6 +16,7 @@
 <c:url var="angularRoute" value="/node_modules/angular-route"/>
 <c:url var="angularTouch" value="/node_modules/angular-touch"/>
 <c:url var="angularBootstrap" value="/node_modules/angular-bootstrap/dist"/>
+<c:url var="angularMap" value="/node_modules/ngmap"/>
 
 <link rel="stylesheet" href="${bootstrap}/css/bootstrap.min.css"/>
 
@@ -30,7 +31,9 @@
 <script type="text/javascript" src="${angularBootstrap}/ui-bootstrap.min.js"></script>
 <script type="text/javascript" src="${angularBootstrap}/ui-bootstrap-tpls.min.js"></script>
 
-
+<script src="http://maps.google.com/maps/api/js"></script>
+<!-- <script src="http://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script> -->
+<script type="text/javascript" src="${angularMap}/ng-map.min.js"></script>
 
 <link rel="stylesheet" href="css/style.css"/>
 <script type="text/javascript" src="js/main.js"></script>

@@ -7,11 +7,10 @@ app.controller("aboutController", function($scope, $http) {
 	console.log("aboutController start...");
 	$scope.$parent.pageClass = 'page-about';
 	
-	$scope.content;
-	$scope.copy = function() {
-		alert($scope.content);
-		
-		$scope.content2 = angular.copy($scope.content);
-	};
+	$scope.$on('mapInitialized', function(event, map) {
+		alert("mapInitialized");
+	    map.setCenter({lat: 37.555506, lng: 126.937342});
+	    map.setZoom(15);
+	});
 
 });

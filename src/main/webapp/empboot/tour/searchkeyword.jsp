@@ -18,7 +18,18 @@ numOfRows = {{response.body.numOfRows}}<br>
 pageNo = {{response.body.pageNo}}<br>
 totalCount = {{response.body.totalCount}}<br>
 <div>
-<pagination ng-change="changePage()" total-items="response.body.totalCount" ng-model="currentPage" max-size="10" class="pagination-sm" boundary-links="true"></pagination>
+<pagination ng-change="changePage()" total-items="response.body.totalCount" ng-model="currentPage" max-size="10" class="pagination-sm" boundary-links="true" rotate="false"></pagination>
+<hr>
+<ul>
+	<li data-ng-repeat="item in response.body.items.item">
+<!-- 	{{item.firstimage}} -->
+	<h3>{{item.title}}</h3>
+	<img alt="xxx" src="{{item.firstimage}}" style="width: 100px; height: 100px;"/>
+	</li>
+
+</ul>
+
+
 <hr>
 {{response}}
 </div>

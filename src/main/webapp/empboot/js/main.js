@@ -2,7 +2,7 @@
  * myApp Module
  */
 
-var app = angular.module("myApp", ["ngSanitize", "ngAnimate", "ngRoute", "ngTouch", "ui.bootstrap"]);
+var app = angular.module("myApp", ["ngSanitize", "ngAnimate", "ngRoute", "ngTouch", "ui.bootstrap", "ngMap"]);
 
 app.filter('convertAreacode', function () {
 	  return function (areacode, scope) {
