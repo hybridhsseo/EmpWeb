@@ -43,6 +43,7 @@
 <script type="text/javascript" src="js/bs/pagenation.js"></script>
 <script type="text/javascript" src="js/bs/buttons.js"></script>
 <script type="text/javascript" src="js/bs/datepicker.js"></script>
+<script type="text/javascript" src="js/bs/accordion.js"></script>
 <script type="text/javascript" src="js/tour/searchkeyword.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
@@ -76,6 +77,7 @@
 			            <li><a href="#/bootstrap/pagenation">Pagenation</a></li>
 			            <li><a href="#/bootstrap/buttons">Buttons</a></li>
 			            <li><a href="#/bootstrap/datepicker">Datepicker</a></li>
+			            <li><a href="#/bootstrap/accordion">Accordion</a></li>
 			            <li><a href="#">Page 3-4</a></li>
 			        </ul>
 		        </li>

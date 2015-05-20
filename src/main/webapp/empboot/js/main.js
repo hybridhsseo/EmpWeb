@@ -58,6 +58,12 @@ app.config(function($routeProvider) {
             controller: 'datepickerController'
         })
         
+         // accordion page
+        .when('/bootstrap/accordion', {
+            templateUrl: 'bootstrap/accordion.jsp',
+            controller: 'accordionController'
+        })
+        
           // searchkeyword page
         .when('/tour/searchkeyword', {
             templateUrl: 'tour/searchkeyword.jsp',
