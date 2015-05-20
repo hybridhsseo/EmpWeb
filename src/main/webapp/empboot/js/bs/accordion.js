@@ -7,7 +7,7 @@ app.controller("accordionController", function($scope, $http, $log) {
 	console.log("accordionController start...");
 	$scope.$parent.pageClass = 'page-accordion';
 	
-	$scope.oneAtATime = true;
+	$scope.oneAtATime = false;
 
 	  $scope.groups = [
 	    {

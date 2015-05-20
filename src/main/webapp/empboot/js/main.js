@@ -71,9 +71,15 @@ app.config(function($routeProvider) {
         })
         
          // map page
-        .when('/map', {
-            templateUrl: 'map.jsp',
+        .when('/map/map', {
+            templateUrl: 'map/map.jsp',
             controller: 'mapController'
+        })
+        
+        // googlemap page
+        .when('/map/googlemap', {
+            templateUrl: 'map/googlemap.jsp',
+            controller: 'googlemapController'
         })
         
         // about page
