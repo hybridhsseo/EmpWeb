@@ -10,5 +10,9 @@
 <a href="#/" class="btn btn-success btn-lg">Home</a>
 <a href="#/contact" class="btn btn-danger btn-lg">Contact</a>
 <hr>
-
-<map center="-34.397, 150.644" zoom="5"></map>
+<tabset justified="true">
+    <tab heading="Justified">xxx</tab>
+    <tab heading="SJ" active="true"><map center="-34.397, 150.644" zoom="5"></map></tab>
+    <tab heading="Long Justified">Long Labeled Justified content</tab>
+</tabset>
+  

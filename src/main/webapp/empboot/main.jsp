@@ -65,7 +65,8 @@
 			</button>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav" data-ng-show="login.status">
+<!-- 			<ul class="nav navbar-nav" data-ng-show="login.status"> -->
+			<ul class="nav navbar-nav" data-ng-show="true">
 			    <li class="dropdown">
 		        	<a class="dropdown-toggle" data-toggle="dropdown" href="">Bootstrap
 		        	<span class="caret"></span></a>

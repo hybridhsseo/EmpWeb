@@ -27,7 +27,8 @@
 <script type="text/javascript" src="${angularAnimate}/angular-animate.min.js"></script>
 <script type="text/javascript" src="${angularRoute}/angular-route.min.js"></script>
 <script type="text/javascript" src="${angularTouch}/angular-touch.min.js"></script>
-<script type="text/javascript" src="${angularBootstrap}/angular-bootstrap.min.js"></script>
+<script type="text/javascript" src="${angularBootstrap}/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="${angularBootstrap}/ui-bootstrap-tpls.min.js"></script>
 
 
 <link rel="stylesheet" href="css/style.css"/>
@@ -54,7 +55,7 @@
 			</button>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav" data-ng-show="login.status">
+			<ul class="nav navbar-nav" data-ng-show="true">
 			    <li><a href="#/grid">Grid</a></li>
 			    <li><a href="#">Page 2</a></li>
 			    <li class="dropdown">
